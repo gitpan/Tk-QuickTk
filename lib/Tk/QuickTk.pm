@@ -16,7 +16,7 @@ BEGIN {
     use Exporter ();
     use AutoLoader ();
     use vars qw($VERSION @ISA @EXPORT @EXPORT_OK %EXPORT_TAGS);
-    $VERSION     = '0.91';
+    $VERSION     = '0.92';
     @ISA         = qw(Exporter AutoLoader);
     #Give a hoot don't pollute, do not export more than needed by default
     @EXPORT      = qw();

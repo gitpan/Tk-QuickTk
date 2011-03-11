@@ -8,7 +8,7 @@
 
 BEGIN { $| = 1; print "1..8\n"; }
 END {print "not ok 1\n" unless $loaded;}
-use Qtk::QuickTk;
+use Tk::QuickTk;
 $loaded = 1;
 print "ok 1\n";
 
@@ -37,7 +37,7 @@ my $t1=['m MainWindow      title:\'QuickTk Minimal Demo\'',[
              ['s c          label:Satisfaction sub:print "ok 4\n";',[]],]],
            ['h Menubutton   side:right                  : text:Help',[
              ['a c          label:About sub:$$gl{widgets}{mts}->insert(\'end\','
-               .' \'this is a demo of perl module Qtk::QuickTk\');'
+               .' \'this is a demo of perl module Tk::QuickTk\');'
                .' print "ok 5\n";',[]],]],]],
          ['tb Frame         side:top fill:x             :',[
            ['d Button       side:left                   : text:Dir'
@@ -75,7 +75,7 @@ which you can view by scrolling down to the end.
 
   (7) Click on "File", in the menu bar, then on "Quit" in the file menu.
 EOS
-my $app=Qtk::QuickTk->new($t1);
+my $app=Tk::QuickTk->new($t1);
 $$app{widgets}{mts}->insert('end',$t2);
 MainLoop;
 print "not ok 8\n";
